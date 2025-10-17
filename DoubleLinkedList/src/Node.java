@@ -1,12 +1,9 @@
 public class Node {
     int data;
     Node next;
-    Node previo;
+    Node prev;
 
-    public Node(int data){
-        this.data=data;
-        this.next=null;
-        this.previo=null;
+    public Node(int data) {
+        this.data = data;
     }
-    
 }
