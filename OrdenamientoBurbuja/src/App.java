@@ -1,10 +1,21 @@
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) throws Exception {
         
+        Scanner sc = new Scanner(System.in);
+        BubbleSort bs = new BubbleSort();
 
-        //crear instancia de BubbleSort
-        BubbleSort sorting = new BubbleSort();
-        int[] arr = {3, 6, 10, 11, 1, 0};
-        sorting.sort(arr);
+        System.out.print("Ingresa el numero de calificaciones: ");
+        int n = sc.nextInt();
+
+        int[] calificaciones = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            System.out.print("Ingresa la calificacion " + (i + 1) + ": ");
+            calificaciones[i] = sc.nextInt();
+        }
+
+        bs.sort(calificaciones);
     }
 }
